@@ -15,6 +15,9 @@
             <n-button type="primary" dashed> Primary </n-button>
           </div>
         </div>
+        <div class="pada-outlink">
+
+        </div>
         <div class="pade-center">
           <h1>给超儿子头打歪</h1>
           <n-grid cols="3" item-responsive>
@@ -41,8 +44,8 @@
         <div class="pada-bottom">
           <h1>超儿子</h1>
           <div class="list" v-for="item in list">
-            <span>{{item.title}}</span>
-            <span>{{item.data}}</span>
+            <span>{{ item.title }}</span>
+            <span>{{ item.data }}</span>
           </div>
         </div>
       </div>
@@ -77,17 +80,21 @@ const list = [
 <style lang="less" scoped>
 .pada-home {
   padding: 20vh 0;
+
   .pada-baseinfo {
     display: flex;
     border: 1px solid teal;
     height: 30vh;
   }
+
   .pada-title-model {
     width: 55%;
   }
+
   .pada-待定 {
     flex: 1;
   }
+
   .pade-center {
     .green {
       display: flex;
@@ -98,13 +105,13 @@ const list = [
       margin: 10px;
     }
   }
-  .pada-bottom{
 
-    .list{
+  .pada-bottom {
+
+    .list {
       display: flex;
       justify-content: space-between;
 
     }
   }
-}
-</style>
+}</style>
