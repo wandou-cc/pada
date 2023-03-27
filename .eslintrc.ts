@@ -3,24 +3,37 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
-    'vue/setup-compiler-macros': true
+    // 'vue/setup-compiler-macros': true
   },
   extends: [
-    'plugin:vue/base',
-    'plugin:vue/vue3-essential',
-    'plugin:vue/vue3-strongly-recommended',
-    'plugin:vue/vue3-recommended',
-    'eslint:recommended',
-    'standard'
+    // 'plugin:vue/base',
+    // 'plugin:vue/vue3-essential',
+    // 'plugin:vue/vue3-strongly-recommended',
+    // 'plugin:vue/vue3-recommended',
+    // 'eslint:recommended',
+    // 'standard'
+    '@nuxtjs/eslint-config-typescript',
+    'plugin:vue/vue3-recommended'
   ],
-  parser: 'vue-eslint-parser',
-  overrides: [
-  ],
+  // parser: 'vue-eslint-parser',
+
   parserOptions: {
-    parser: '@typescript-eslint/parser',
-    ecmaVersion: 'latest',
+    ecmaVersion: 13,
     sourceType: 'module'
   },
+  overrides: [
+    {
+      files: [
+        '**/pages/**/*.{js,ts,vue}',
+        '**/layouts/**/*.{js,ts,vue}',
+        '**/app.{js,ts,vue}',
+        '**/error.{js,ts,vue}'
+      ],
+      rules: {
+        'vue/multi-word-component-names': 'off'
+      }
+    }
+  ],
   plugins: [
     'vue',
     '@typescript-eslint'

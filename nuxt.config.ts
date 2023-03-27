@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     css: [
         '@/assets/less/index.less'
     ],
+    typescript: {
+        typeCheck: true
+      },
     build: {
         transpile:
       process.env.NODE_ENV === 'production'
