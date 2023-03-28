@@ -29,7 +29,7 @@
                         <n-col :span="8" v-for="item in ProjectsList" :key="item.id">
                             <div class="pada-project-item pada-shadow">
                                 <div class="pada-project-item-icon">
-                                    <img alt="" />
+                                    <img :src="`/public/img/${item.icon}`" />
                                 </div>
                                 <div class="pada-project-item-center">
 
@@ -61,12 +61,14 @@ const ProjectsList = [
     },
     {
         id: 2,
+        icon: 'douyin.svg',
         packageName: 'blogUi',
         githubUrl: 'https://www.naiveui.com/zh-CN/os-theme/components/icon'
     },
     {
         id: 3,
         packageName: 'blogUi',
+        icon: 'vscode.svg',
         githubUrl: 'https://www.naiveui.com/zh-CN/os-theme/components/icon'
     }
 ]
@@ -132,14 +134,23 @@ const list = [
 
     .pada-project-item {
         display: flex;
-        // margin: 10px;
         align-items: center;
-        padding: 25px 10px;
+
+        padding: 1.5625rem 10px;
         border-radius: 10px;
+        height: 50px;
         &-icon {
             width: 50px;
-            height: 50px;
-            border: 1px solid #ccc;
+            height: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        &-center {
+           flex: 1;
+           height: 100%;
+           border: .0625rem solid #ccc;
         }
     }
 }
