@@ -1,6 +1,6 @@
 
 <template>
-    <NuxtLayout>
+    <NuxtLayout>         
         <template #content>
             <div class="pada-home">
                 <div class="pada-baseinfo">
@@ -15,36 +15,28 @@
                         <!-- <pada-button> 按钮DIANJ </pada-button> -->
                     </div>
                 </div> 
-                <div class="pada-outlink">
-                    <n-button>  
+                <div class="pada-outlink pada-shadow">
+                    <n-button strong secondary>  
                         <template #icon>
-                            <n-icon><cash-icon /></n-icon>
+                            <n-icon><logo-github /></n-icon>
                         </template>
                         github
                     </n-button>
                 </div>
-                <div class="pade-center">
-                    <h1>给超儿子头打歪</h1>
-                    <n-grid cols="3" item-responsive>
-                        <n-grid-item span="">
-                            <div class="green">1</div>
-                        </n-grid-item>
-                        <n-grid-item>
-                            <div class="green">2</div>
-                        </n-grid-item>
-                        <n-grid-item>
-                            <div class="green">3</div>
-                        </n-grid-item>
-                        <n-grid-item>
-                            <div class="green">4</div>
-                        </n-grid-item>
-                        <n-grid-item>
-                            <div class="green">5</div>
-                        </n-grid-item>
-                        <n-grid-item>
-                            <div class="green">6</div>
-                        </n-grid-item>
-                    </n-grid>
+                <div class="pada-projects">
+                    <h1>Projects</h1>
+                    <n-row gutter="24" item-responsive class="pada-projects-center">
+                        <n-col :span="8" v-for="item in ProjectsList" :key="item.id">
+                            <div class="pada-project-item pada-shadow">
+                                <div class="pada-project-item-icon">
+                                    <img alt="" />
+                                </div>
+                                <div class="pada-project-item-center">
+
+                                </div>
+                            </div>
+                        </n-col>
+                    </n-row>
                 </div>
                 <div class="pada-bottom">
                     <h1>超儿子</h1>
@@ -58,6 +50,27 @@
     </NuxtLayout>
 </template>
 <script lang="ts" setup>
+import { LogoGithub } from "@vicons/ionicons5"
+
+const ProjectsList = [
+    {
+        id: 1,
+        icon: 'QQ.svg',
+        packageName: 'blogUi',
+        githubUrl: 'https://www.naiveui.com/zh-CN/os-theme/components/icon'
+    },
+    {
+        id: 2,
+        packageName: 'blogUi',
+        githubUrl: 'https://www.naiveui.com/zh-CN/os-theme/components/icon'
+    },
+    {
+        id: 3,
+        packageName: 'blogUi',
+        githubUrl: 'https://www.naiveui.com/zh-CN/os-theme/components/icon'
+    }
+]
+
 const list = [
     {
         title: "超儿子是个猪猪，猪猪猪猪",
@@ -104,19 +117,30 @@ const list = [
 
 .pada-outlink {
     margin: 3vh 0;
-    border: 1px solid teal;
+    // border: 1px solid teal;
     display: flex;
+    border-radius: 2px;
     justify-content: center;
+    padding: 5px;
 }
 
-.pade-center {
-    .green {
+.pada-projects {
+    &center {
+        // display: flex;
+        // justify-content: space-around;
+    }
+
+    .pada-project-item {
         display: flex;
+        // margin: 10px;
         align-items: center;
-        justify-content: center;
-        height: 100px;
-        background-color: rgba(0, 128, 0, 0.24);
-        margin: 10px;
+        padding: 25px 10px;
+        border-radius: 10px;
+        &-icon {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+        }
     }
 }
 

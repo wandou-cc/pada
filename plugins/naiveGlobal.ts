@@ -1,9 +1,6 @@
 
 import { defineNuxtPlugin } from '#app'
 import { createDiscreteApi } from 'naive-ui'
-import { 
-    CashOutline as CashIcon,
-} from '@vicons/ionicons5'
 
 export default defineNuxtPlugin((nuxtApp) => {
     
