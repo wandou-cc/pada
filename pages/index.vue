@@ -24,15 +24,16 @@
                     </n-button>
                 </div>
                 <div class="pada-projects">
-                    <h1>Projects</h1>
+                    <h1 class="pada-title">Projects</h1>
                     <n-row gutter="24" item-responsive class="pada-projects-center">
                         <n-col :span="8" v-for="item in ProjectsList" :key="item.id">
                             <div class="pada-project-item pada-shadow">
                                 <div class="pada-project-item-icon">
-                                    <img :src="`/public/img/${item.icon}`" />
+                                    <img />
                                 </div>
                                 <div class="pada-project-item-center">
-
+                                    <p class="flex flex-row justify-center text-green-500 font-bold">ceshi</p>
+                                    <p>这里是二级这里是二是二级这里是二级</p>
                                 </div>
                             </div>
                         </n-col>
@@ -104,7 +105,7 @@ const list = [
 
 .pada-baseinfo {
     display: flex;
-    border: 1px solid teal;
+    border: .0625rem solid teal;
     height: 30vh;
 
     .pada-title-model {
@@ -118,12 +119,12 @@ const list = [
 }
 
 .pada-outlink {
-    margin: 3vh 0;
-    // border: 1px solid teal;
+    margin-top: 2vh;
+    // border: .0625rem solid teal;
     display: flex;
-    border-radius: 2px;
+    border-radius: .125rem;
     justify-content: center;
-    padding: 5px;
+    padding: .3125rem;
 }
 
 .pada-projects {
@@ -135,13 +136,11 @@ const list = [
     .pada-project-item {
         display: flex;
         align-items: center;
-
-        padding: 1.5625rem 10px;
-        border-radius: 10px;
-        height: 50px;
+        border-radius: .625rem;
+        padding: .9375rem .625rem;
         &-icon {
-            width: 50px;
-            height: 100%;
+            width: 3.125rem;
+            height: 50px;
             img {
                 height: 100%;
                 width: 100%;
@@ -150,7 +149,7 @@ const list = [
         &-center {
            flex: 1;
            height: 100%;
-           border: .0625rem solid #ccc;
+           margin-left: 20px;
         }
     }
 }

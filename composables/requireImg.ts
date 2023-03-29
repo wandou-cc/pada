@@ -1,3 +1,8 @@
-export const requireImg = (url: String) => {
-    return new URL(`../assets/img/${url}`, import.meta.url).href
-}
+// export const requireImg = (url: String) => {
+//    const glob = import.meta.glob(`~/assets/img/${url}`, { eager: true })
+//    const img = Object.fromEntries(
+//     Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+//    )
+//    return img
+// }
+// screen
