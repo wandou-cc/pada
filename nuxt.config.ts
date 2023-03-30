@@ -4,7 +4,7 @@ import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // https://vite.nuxtjs.org/misc/common-issues/#styleresources
-  css: ["@/assets/less/index.less","@/assets/css/tailwind.css"],
+  css: ["@/assets/less/index.less"],
   typescript: {
     typeCheck: false,
   },
@@ -51,4 +51,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  modules: [
+    'nuxt-windicss',
+  ],
 });
