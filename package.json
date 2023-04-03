@@ -14,7 +14,9 @@
     "nuxt": "^3.2.2",
     "nuxt-windicss": "^2.6.0",
     "unplugin-auto-import": "^0.15.1",
-    "unplugin-vue-components": "^0.24.1"
+    "unplugin-vue-components": "^0.24.1",
+    "vfonts": "^0.0.3",
+    "vite-plugin-windicss": "^1.8.10"
   },
   "dependencies": {
     "@css-render/vue3-ssr": "^0.15.12"

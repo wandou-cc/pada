@@ -2,6 +2,7 @@
 import { defineNuxtPlugin } from '#app'
 import { createDiscreteApi } from 'naive-ui'
 
+
 export default defineNuxtPlugin((nuxtApp) => {
     
     const { loadingBar } = createDiscreteApi(['loadingBar'])

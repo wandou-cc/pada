@@ -1,5 +1,11 @@
 import { defineConfig } from 'windicss/helpers'
 
 export default defineConfig({
-    attributify: false
+    theme: {
+	    extend: {
+	        fontFamily: {
+	            bebas: ['"v-sans"', '"v-mono"'],
+	        },
+	    },
+	},
 })

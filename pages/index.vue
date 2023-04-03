@@ -1,47 +1,49 @@
 
 <template>
-    <NuxtLayout>         
+    <NuxtLayout>
         <template #content>
-            <div class="h-20 mt-40">
-                <div class="flex">
-                    <div class="">
-                        <div class="">HELLO I AM A PADA</div>
-                        <div class="">
-                            Front-end developer / Amateur designer. Currently working at DiDi.
+            <div class="h-20 mt-50">
+                <div class="flex items-center h-40">
+                    <div>
+                        <div class="text-5xl font-900">HELLO I'm PADA</div>
+                        <div class="mt-5 mb-5">
+                            Front-end developer / Amateur designer. Currently working at DiDi.<br />
                             I like making interesting projects.
                         </div>
                     </div>
-                    <div class="">
-                        <!-- <pada-button> 按钮DIANJ </pada-button> -->
+                    <div class="flex items-center justify-evenly h-10 ml-30">
+                        <n-button strong secondary class="m-2 flex-1">
+                            <template #icon>
+                                <n-icon><logo-github /></n-icon>
+                            </template>
+                            github
+                        </n-button>
+                        <n-button strong secondary class="m-2 flex-1">
+                            <template #icon>
+                                <n-icon><logo-github /></n-icon>
+                            </template>
+                            github
+                        </n-button>
                     </div>
-                </div> 
-                <div class="">
-                    <n-button strong secondary>  
-                        <template #icon>
-                            <n-icon><logo-github /></n-icon>
-                        </template>
-                        github
-                    </n-button>
                 </div>
-                <div class="">
-                    <h1 class="">Projects</h1>
-                    <n-row gutter="24" item-responsive class="">
-                        <n-col :span="8" v-for="item in ProjectsList" :key="item.id">
-                            <n-card :title="item.packageName" hoverable>
-                               <div class="flex items-center">
-                                    <img  class="w-10 mr-5" :src="requireImg('img/' + item.icon)" alt="">
-                                    <span>1</span>
-                               </div>
-                            </n-card>
-                        </n-col>
-                    </n-row>
-                </div>
-                <div class="">
-                    <h1>超儿子</h1>
-                    <div class="" v-for="item in list">
-                        <span>{{ item.title }}</span>
-                        <span>{{ item.data }}</span>
+
+                <div>
+                    <div>
+                        <h1 class="pada-title">Projects</h1>
                     </div>
+                    <div class="flex">
+                        <n-card class="m-3  flex-1" :title="item.packageName" hoverable v-for="item in ProjectsList"
+                            :key="item.id">
+                            <div class="flex items-center">
+                                <img class="w-10 mr-5" :src="requireImg('img/' + item.icon)" alt="">
+                                <span>1</span>
+                            </div>
+                        </n-card>
+                    </div>
+                </div>
+                <div>
+                    <h1 class="pada-title">Projects</h1>
+
                 </div>
             </div>
         </template>
@@ -70,27 +72,11 @@ const ProjectsList = [
         githubUrl: 'https://www.naiveui.com/zh-CN/os-theme/components/icon'
     }
 ]
-
-const list = [
-    {
-        title: "超儿子是个猪猪，猪猪猪猪",
-        data: "2023-01-01",
-    },
-    {
-        title: "超儿子是个猪猪，猪猪猪猪",
-        data: "2023-01-01",
-    },
-    {
-        title: "超儿子是个猪猪，猪猪猪猪",
-        data: "2023-01-01",
-    },
-    {
-        title: "超儿子是个猪猪，猪猪猪猪",
-        data: "2023-01-01",
-    },
-    {
-        title: "超儿子是个猪猪，猪猪猪猪",
-        data: "2023-01-01",
-    },
-];
 </script>
+
+
+<style scoped lang="less">
+.pada-title {
+    @apply text-2xl m-5;
+}
+</style>
