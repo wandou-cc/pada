@@ -1,1 +1,1 @@
-FIRST-ANDROID-APP-SEACRIST
+It is fun chatting with you!
