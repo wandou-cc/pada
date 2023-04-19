@@ -6,18 +6,16 @@
                 <div class="flex items-center h-40">
                     <div>
                         <div class="text-5xl font-900">HELLO I'm PADA</div>
-                        <div class="mt-5 mb-5">
+                        <div class="my-5">
                             Front-end developer / Amateur designer. Currently working at DiDi.<br />
                             I like making interesting projects.
                         </div>
                     </div>
                     <div class="flex items-center justify-evenly h-10 ml-30">
-                        <n-button strong v-bind="{ ...item.buttonAttr }" :class="`outlink-${item.icon}`"
-                            class="outlink-button-icon m-2 flex-1" v-for="(item, index) in outlinkList" :key="index">
+                        <n-button tertiary v-bind="{ ...item.buttonAttr }" :class="`outlink-${item.icon}`"
+                            class="outlink-button-icon rounded-lg  m-2 flex-1" v-for="(item, index) in outlinkList" :key="index">
                             <template #icon v-if="item.icon">
-                                <!-- <n-icon :component="item.icon" v-bind="{ ...item.iconAttr }" /> -->
-                                <!-- <img :src="requireImg('img/' + item.icon)" v-bind="{ ...item.iconAttr }" alt=""> -->
-                                <div class="icon"></div>
+                                <div class="icon w-5"></div>
                             </template>
                             <span v-if="item.name"> github </span>
                         </n-button>
@@ -27,14 +25,16 @@
                     <div>
                         <h1 class="pada-title">Projects</h1>
                     </div>
-                    <div class="flex">
-                        <n-card class="mr-3 flex-1 cursor-pointer" :title="item.packageName" hoverable
-                            v-for="item in ProjectsList" :key="item.id">
-                            <div class="flex items-center">
+                    <div class="flex justify-between">
+                        <div v-for="item in ProjectsList" :key="item.id" class="transition-all duration-300 text-dark-400 ease-out h-28 w-1/3 flex-1 mr-2 rounded-lg p-3  bg-gray-100 cursor-pointer hover:(bg-gray-300  duration-300 text-light-100 transition-all ease-out ) ">
+                            <div class="flex items-center my-3">
                                 <img class="w-10 mr-5" :src="requireImg('img/' + item.icon)" alt="">
                                 <span>1</span>
                             </div>
-                        </n-card>
+                            <div>
+                                123123
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -78,7 +78,13 @@ const outlinkList = [
         url: 'https://www.naiveui.com/zh-CN/os-theme/components/icon'
     },
     {
-        icon: 'bilibili',
+        icon: '',
+        iconAttr: {},
+        name: 'github',
+        url: 'https://www.naiveui.com/zh-CN/os-theme/components/icon'
+    },
+    {
+        icon: 'github',
         iconAttr: {},
         url: 'https://www.naiveui.com/zh-CN/os-theme/components/icon'
     }
@@ -102,21 +108,6 @@ const outlinkList = [
     }
 }
 
-
-// .outlink-button-icon {
-//     .icon {
-//         height: 100%;
-//         width: 100%;
-//         transition: all @transition-speed;
-//     }
-
-//     &:hover {
-//         .icon {
-//             transition: all @transition-speed;
-//         }
-//     }
-// }
-
 .outlink-github {
     .icon {
         background: url('~/assets/img/github.svg') no-repeat center;
@@ -124,9 +115,11 @@ const outlinkList = [
 
     &:hover {
         .icon {
-            background: url('~/assets/img/douyin.svg') no-repeat center;
+            background: url('~/assets/img/github-hover.svg') no-repeat center;
         }
 
-        background-color: aqua;
+        background-color: rgb(55, 55, 55);
+        color: #FFF;
     }
-}</style>
+}
+</style>
