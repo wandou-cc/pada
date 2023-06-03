@@ -1,2 +1,1 @@
-oORer
-Glad to meet you!
+Hospital_management_system
