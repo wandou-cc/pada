@@ -1,2 +1,0 @@
-FySJ
-publish-subscribe
